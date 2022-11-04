@@ -16,23 +16,27 @@ import {
   VideoCameraIcon,
 } from "@heroicons/react/outline";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 function Header() {
   const { data: session } = useSession();
   return (
     <header className=" sticky top-0 z-50 flex items-center px-4 py-2 shadow-sm bg-white">
-      <div className=" flex items-center space-x-1 flex-shrink-0 cursor-pointer">
-        <div className="relative bg-[#F74201] p-1.5 rounded-full">
-          <Image
-            src="https://img.icons8.com/ios-glyphs/30/FFFFFF/reddit.png"
-            layout="fill"
-            objectfit="contain"
-            width={30}
-            height={30}
-          />
+      <Link href="/">
+        <div className=" flex items-center space-x-1 flex-shrink-0 cursor-pointer">
+          <div className="relative bg-[#F74201] p-1.5 rounded-full">
+            <Image
+              src="https://img.icons8.com/ios-glyphs/30/FFFFFF/reddit.png"
+              layout="fill"
+              objectfit="contain"
+              width={30}
+              height={30}
+              alt=""
+            />
+          </div>
+          <p className="font-semibold text-lg">reddit</p>
         </div>
-        <p className="font-semibold text-lg">reddit</p>
-      </div>
+      </Link>
       <div className="flex items-center mx-7 xl:min-w-[300px]">
         <HomeIcon className="h-5 w-5" />
         <p className="ml-2 flex-1 hidden lg:inline">Home</p>
@@ -77,6 +81,7 @@ function Header() {
             layout="fill"
             width={20}
             height={20}
+            alt=""
           />
           <p className="text-gray-400">
             {!session ? (

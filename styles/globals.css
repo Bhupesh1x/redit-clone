@@ -6,4 +6,12 @@
   .icon {
     @apply h-9 w-6 lg:w-9 lg:p-1 rounded-sm lg:hover:bg-gray-100 cursor-pointer;
   }
+
+  .voteButton {
+    @apply h-6 w-6 rounded-md cursor-pointer hover:bg-gray-200 p-1;
+  }
+
+  .commentButtons {
+    @apply text-xs text-gray-400  flex items-center hover:bg-gray-100 rounded-md font-semibold p-2 cursor-pointer space-x-1;
+  }
 }
