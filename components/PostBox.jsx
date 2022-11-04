@@ -95,7 +95,7 @@ function PostBox({ subreddit }) {
 
   return (
     <form
-      className="bg-white rounded-md border border-gray-300 sticky top-16 p-2 z-50"
+      className="bg-white rounded-md border border-gray-300 sticky sticky-3 top-16 p-2 z-50"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex items-center space-x-3">
